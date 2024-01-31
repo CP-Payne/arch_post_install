@@ -45,7 +45,8 @@ sudo pacman -S linux-lts linux-lts-headers linux-hardened linux-hardened-headers
 
 # Set up Timeshift and Preload for backups and performance
 yay -Sy timeshift preload --noconfirm
-sudo systemctl enable preload.service
+#sudo systemctl enable preload.service
+sudo systemctl enable preload && sudo systemctl start preload
 
 # Configure the firewall
 sudo pacman -S ufw --noconfirm
